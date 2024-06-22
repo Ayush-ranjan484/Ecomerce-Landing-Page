@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - E-commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Ayush-Shop</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <!-- <h1>Welcome to Kajal'SHop</h1> -->
+            <!-- <p>Your one-stop shop for the best products online.</p> -->
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </section><br><br>
+
+    <!-- Featured Products -->
+    <!--  -->
+    <section id="products" class="products">
+        <h2>Girls Wears</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="image/tshirt.avif" alt="T-Shirt" width="300px">
+                <h3>T-Shirt</h3>
+                <p>$69</p>
+                <a href="image/tshirt.avif" class="btn">View Details</a>
+            </div>
+                <div class="product-item">
+                    <img src="image/frok.webp" alt="frock">
+                    <h3>Girls-Frock</h3>
+                    <p>$199</p>
+                    <a href="{{ url_for('product', product_id=product.id) }}" class="btn">View Details</a>
+                </div>
+                <div class="product-item">
+                    <img src="image/girl1.webp" alt="{{ product.name }}">
+                    <h3>Anarkali Dress</h3>
+                    <p>$299</p>
+                    <a href="{{ url_for('product', product_id=product.id) }}" class="btn">View Details</a>
+                </div>
+        </div>
+    </section>
+    <!-- another girls section -->
+    <section id="products" class="products">
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="image/saree.jpeg" alt="{{ product.name }}">
+                <h3>Saree</h3>
+                <p>$299</p>
+                <a href="{{ url_for('product', product_id=product.id) }}" class="btn">View Details</a>
+            </div>
+                <div class="product-item">
+                    <img src="image/shopping.webp" alt="{{ product.name }}">
+                    <h3>Gown</h3>
+                    <p>$889</p>
+                    <a href="{{ url_for('product', product_id=product.id) }}" class="btn">View Details</a>
+                </div>
+                <div class="product-item">
+                    <img src="image/wrapdress.webp" alt="{{ product.name }}">
+                    <h3>One Piece</h3>
+                    <p>$999</p>
+                    <a href="{{ url_for('product', product_id=product.id) }}" class="btn">View Details</a>
+                </div>
+        </div>
+    </section>
+
+
+    <!-- mens wears -->
+
+
+<!-- New Product Section with Zoom Effect -->
+<section id="new-products" class="new-products">
+    <h2>Mens wears</h2>
+    <div class="new-product-grid">
+        <div class="new-product-item">
+            <div class="image-container">
+                <img src="image/means shirt.jpg" alt="{{ product.name }}">
+            </div>
+            <h3>shirt</h3>
+            <p>$499</p>
+            <a href="{{ url_for('product', product_id=product.id) }}" class="btn-zoom">View Details</a>
+        </div>
+            <div class="new-product-item">
+                <div class="image-container">
+                    <img src="image/formal.webp" alt="{{ product.name }}">
+                </div>
+                <h3>Formal shirt</h3>
+                <p>$399</p>
+                <a href="{{ url_for('product', product_id=product.id) }}" class="btn-zoom">View Details</a>
+            </div>
+            <div class="new-product-item">
+                <div class="image-container">
+                    <img src="image/kurta.webp" alt="kurta">
+                </div>
+                <h3>kurta</h3>
+                <p>$599</p>
+                <a href="{{ url_for('product', product_id=product.id) }}" class="btn-zoom">View Details</a>
+            </div>
+    </div>
+</section>
+<!-- another means wears -->
+
+<section id="new-products" class="new-products">
+    <div class="new-product-grid">
+        <div class="new-product-item">
+            <div class="image-container">
+                <img src="image/mens jeans.webp" alt="{{ product.name }}">
+            </div>
+            <h3>Mens Jeans</h3>
+            <p>$999</p>
+            <a href="{{ url_for('product', product_id=product.id) }}" class="btn-zoom">View Details</a>
+        </div>
+            <div class="new-product-item">
+                <div class="image-container">
+                    <img src="image/mens tshirt.webp" alt="{{ product.name }}">
+                </div>
+                <h3>Mens T-shirt</h3>
+                <p>$399</p>
+                <a href="{{ url_for('product', product_id=product.id) }}" class="btn-zoom">View Details</a>
+            </div>
+            <div class="new-product-item">
+                <div class="image-container">
+                    <img src="image/casual mens.jpeg" alt="kurta">
+                </div>
+                <h3>Casual Dress</h3>
+                <p>$1599</p>
+                <a href="{{ url_for('product', product_id=product.id) }}" class="btn-zoom">View Details</a>
+            </div>
+    </div>
+</section>
+    <!-- About Section -->
+    <!-- About Section -->
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="about-container">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>We are dedicated to providing you with the best online shopping experience. Our products are curated from top brands and we ensure the highest quality. Our team is committed to excellence and customer satisfaction.</p>
+                <p>Our mission is to bring you the latest and greatest products at the best prices. We believe in quality over quantity and strive to build long-lasting relationships with our customers.</p>
+            </div>
+            <div class="about-image">
+                <img src="image/Abhi-logo.png" alt="About Us">
+            </div>
+        </div>
+        <div class="social-media">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/__a.y.u.r__/" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- Include Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Ayush-Shop. All rights reserved.</p>
+    </footer>
+</body>
+</html>
